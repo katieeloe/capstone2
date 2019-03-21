@@ -7,11 +7,11 @@ Cuisines are not stagnant. While they have evolved over time (in addition to new
 
 The recipe data was gathered using a food API. The API had functionality allowing parameters filters (one of them being cuisine) to be passed with the request. This gave me the ability to ensure my classes were evenly weighted:
 
-![](/home/katie/01-OneDrive/01_galvanize_dsi/capstones/02-capstone_2/capstone2/images/class_weights_train.png)
+![](images/class_weights_train.png)
 
 When I requested the test recipes, I offset my results by 10 pages to avoid duplicating recipes from my train set in my test set. Unfortunately, there weren't enough African recipes in the entire data set to pull any of this cuisine 10 pages deep. My resulting test set:
 
-![](/home/katie/01-OneDrive/01_galvanize_dsi/capstones/02-capstone_2/capstone2/images/class_weights_test.png)
+![](/images/class_weights_test.png)
 
 
 Each recipe was a group of nested dictionaries, formatted as a string. The recipes could be easily navigated by converting the strings to Json objects. The ingredients were contained in an inner dictionary called, 'extendedIngredients', sample below:
